@@ -1,0 +1,64 @@
+.listado-grid {
+
+
+    /* margin-top: 4rem; */
+    display: grid;
+    align-items: center;
+    margin: 4rem 1rem 1rem -1rem;
+
+    gap: 2rem;
+}
+
+.alinear {
+    margin: auto;
+    width: 90%;
+
+    /* padding: 10px; */
+}
+
+.whiteCol a {
+    color: #f1572f !important;
+
+}
+
+/*Media query para moviles*/
+@media(min-width:768px) {
+    .listado-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para las imágenes*/
+.card {
+    /* Degradado en negro sobre las imagenes*/
+    z-index: 6;
+    object-fit: cover;
+
+    overflow: hidden;
+    /* border-radius: 1em; */
+    -webkit-box-shadow: 10px 10px 10px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 10px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 10px -2px rgba(0, 0, 0, 0.75);
+    /* height: 500px; */
+}
+
+/* Efecto lupa imágenes*/
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card-body {
+    z-index: 2;
+}
+
+/*Imagen al fondo, texto delante*/
+.card img {
+    width: 100%;
+    height: 500px;
+    display: block;
+    /* position: relative; */
+
+    z-index: -2;
+    object-fit: cover;
+    transition: transform 300ms ease;
+}
